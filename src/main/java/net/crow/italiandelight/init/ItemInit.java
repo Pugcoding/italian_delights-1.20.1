@@ -32,6 +32,8 @@ public class ItemInit {
         return new Item.Properties().food(food);
     }
 
+    public static Item.Properties drinkItem(FoodProperties food) { return new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE); }
+
     // General Deferred Declaration
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ItalianDelightMain.MOD_ID);
@@ -48,13 +50,13 @@ public class ItemInit {
 
 
     // Wines
-    public static final RegistryObject<Item> GLOWBERRY_WINE = ITEMS.register("glowberry_wine", () -> new BoozeItem(FluidInit.GLOWBERRY_WINE.get(), foodItem(FoodValues.GLOWBERRY_WINE)));
-    public static final RegistryObject<Item> ROSE_WINE = ITEMS.register("rose_wine", () -> new BoozeItem(FluidInit.ROSE_WINE.get(), foodItem(FoodValues.ROSE_WINE)));
-    public static final RegistryObject<Item> HELLHOUND_WINE = ITEMS.register("hellhound_wine", () -> new BoozeItem(FluidInit.HELLHOUND_WINE.get(), foodItem(FoodValues.HELLHOUND_WINE)));
-    public static final RegistryObject<Item> DRAGONBORN_WINE = ITEMS.register("dragonborn_wine", () -> new BoozeItem(FluidInit.DRAGONBORN_WINE.get(), foodItem(FoodValues.DRAGONBORN_WINE)));
-    public static final RegistryObject<Item> HASTING_WINE = ITEMS.register("hasting_wine", () -> new BoozeItem(FluidInit.HASTING_WINE.get(), foodItem(FoodValues.HASTING_WINE)));
-    public static final RegistryObject<Item> SWEETBERRY_WINE = ITEMS.register("sweetberry_wine", () -> new BoozeItem(FluidInit.SWEETBERRY_WINE.get(), foodItem(FoodValues.SWEETBERRY_WINE)));
-    public static final RegistryObject<Item> SPUMANTE = ITEMS.register("spumante", () -> new BoozeItem(FluidInit.SPUMANTE.get(),foodItem(FoodValues.SPUMANTE)));
+    public static final RegistryObject<Item> GLOWBERRY_WINE = ITEMS.register("glowberry_wine", () -> new BoozeItem(FluidInit.GLOWBERRY_WINE.get(), drinkItem(FoodValues.GLOWBERRY_WINE)));
+    public static final RegistryObject<Item> ROSE_WINE = ITEMS.register("rose_wine", () -> new BoozeItem(FluidInit.ROSE_WINE.get(), drinkItem(FoodValues.ROSE_WINE)));
+    public static final RegistryObject<Item> HELLHOUND_WINE = ITEMS.register("hellhound_wine", () -> new BoozeItem(FluidInit.HELLHOUND_WINE.get(), drinkItem(FoodValues.HELLHOUND_WINE)));
+    public static final RegistryObject<Item> DRAGONBORN_WINE = ITEMS.register("dragonborn_wine", () -> new BoozeItem(FluidInit.DRAGONBORN_WINE.get(), drinkItem(FoodValues.DRAGONBORN_WINE)));
+    public static final RegistryObject<Item> HASTING_WINE = ITEMS.register("hasting_wine", () -> new BoozeItem(FluidInit.HASTING_WINE.get(), drinkItem(FoodValues.HASTING_WINE)));
+    public static final RegistryObject<Item> SWEETBERRY_WINE = ITEMS.register("sweetberry_wine", () -> new BoozeItem(FluidInit.SWEETBERRY_WINE.get(), drinkItem(FoodValues.SWEETBERRY_WINE)));
+    public static final RegistryObject<Item> SPUMANTE = ITEMS.register("spumante", () -> new BoozeItem(FluidInit.SPUMANTE.get(), drinkItem(FoodValues.SPUMANTE)));
 
     // Dishes
     public static final RegistryObject<Item> BERRY_DELIGHT = ITEMS.register("berry_delight", () -> new Item(foodItem(FoodValues.BERRY_DELIGHT)));

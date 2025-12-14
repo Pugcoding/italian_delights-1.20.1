@@ -24,7 +24,6 @@ public class CreativeTabInit {
                         pOutput.accept(ItemInit.OLIVES.get());
                         pOutput.accept(ItemInit.GRAPE_SEEDS.get());
                         pOutput.accept(ItemInit.HERB_LEAVES.get());
-                        pOutput.accept(ItemInit.BERRY_DELIGHT.get());
 
                         pOutput.accept(ItemInit.GLOWBERRY_WINE.get());
                         pOutput.accept(ItemInit.ROSE_WINE.get());
@@ -34,6 +33,7 @@ public class CreativeTabInit {
                         pOutput.accept(ItemInit.SWEETBERRY_WINE.get());
                         pOutput.accept(ItemInit.SPUMANTE.get());
 
+                        pOutput.accept(ItemInit.BERRY_DELIGHT.get());
                         pOutput.accept(ItemInit.PASTA_AL_TOMATO.get());
                         pOutput.accept(ItemInit.PASTA_AL_PESTO.get());
                         pOutput.accept(ItemInit.RISOTTO_AL_SUGO.get());
