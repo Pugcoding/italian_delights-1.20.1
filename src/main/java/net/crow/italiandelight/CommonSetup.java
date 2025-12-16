@@ -10,7 +10,7 @@ public class CommonSetup {
     public static void init(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             registerCompostables();
-            //WildCropGen.registerWildCropGeneration();
+//            WildCropGen.registerWildCropGeneration();
         });
     }
 
